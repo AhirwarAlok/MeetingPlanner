@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Room Details{% endblock %}
+{% block title %}Meetings{% endblock %}
 
 {% block main %}
     <div class="container my-4">
-        <div class="pageHeading">Room Details</div>
+        <div class="pageHeading">Meetings</div>
         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
             <div class="card shadow-sm flatCard">
                 <div class="card-header boldCardHeader">
-                    {{ room.roomName }}
+                    List of Meetings:
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Room No : {{ room.roomNo }}</li>
-                        <li class="list-group-item">Floor No : {{ room.floorNumber }}</li>
-                        <li class="list-group-item">Building Name : {{ room.buildingName }}</li>
+                        {% for meeting in meetings %}
+                        <li class="list-group-item">
+                            <a class="unStyledLink" href="#">{{ meeting }}</a>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Meeting Details{% endblock %}
+
+{% block main %}
+    <div class="container my-4">
+        <div class="pageHeading">Meeting Details</div>
+        <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+            <div class="card shadow-sm flatCard">
+                <div class="card-header boldCardHeader">
+                    {{ meeting.title }}
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Date : {{ meeting.date }}</li>
+                        <li class="list-group-item">Time : {{ meeting.time }}</li>
+                        <li class="list-group-item">Duration : {{ meeting.duration }}</li>
+                        <li class="list-group-item">
+                            Room : <a class="unStyledLink" href="{% url 'roomDetails' meeting.room.id %}">{{ meeting.room }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -17,3 +17,13 @@ def rooms(request):
 def roomDetails(request, id):
     room = get_object_or_404(Room, pk=id)
     return render(request, "MeetingPlannerUI/roomDetails.html", {"room": room})
+
+
+def meetings(request):
+    meetings = Meeting.objects.all()
+    return render(request, "MeetingPlannerUI/meetings.html", {"meetings": meetings})
+
+
+def meetingDetails(request, id):
+    meeting = get_object_or_404(Meeting, pk=id)
+    return render(request, "MeetingPlannerUI/meetingDetails.html", {"meeting": meeting})
