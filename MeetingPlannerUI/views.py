@@ -1,5 +1,10 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from .models import Room, Meeting
+
+
+def default(request):
+    # This page is redirected to make link highlighting work properly 
+    return redirect(home)
 
 
 def home(request):

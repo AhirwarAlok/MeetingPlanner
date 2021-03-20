@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import home, meetingDetails, meetings, roomDetails, rooms
+from .views import default, home, meetingDetails, meetings, roomDetails, rooms
 
 
 urlpatterns = [
-    path("", home, name="home"),
+    path("", default, name="default"),
+    path("home", home, name="home"),
     path("rooms", rooms, name="rooms"),
     path("room/<int:id>", roomDetails, name="roomDetails"),
     path("meetings", meetings, name="meetings"),

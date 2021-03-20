@@ -37,3 +37,7 @@ footer {
 .heartIcon {
     color: #ff0000;
 }
+
+footer .unStyledLink {
+    color: #ffffff;
+}
