@@ -1,6 +1,21 @@
+/* header */
+
 .mainNavigation .nav-item {
     margin-left: 2rem;
 }
+
+/* main */
+
+.pageHeading {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.flatCard {
+    border-radius: 0;
+}
+
+/* footer */
 
 footer {
     position: fixed;
