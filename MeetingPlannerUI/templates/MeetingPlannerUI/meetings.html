@@ -15,7 +15,7 @@
                     <ul class="list-group list-group-flush">
                         {% for meeting in meetings %}
                         <li class="list-group-item">
-                            <a class="unStyledLink" href="#">{{ meeting }}</a>
+                            <a class="unStyledLink" href="{% url 'meetingDetails' meeting.id %}">{{ meeting }}</a>
                         </li>
                         {% endfor %}
                     </ul>
