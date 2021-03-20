@@ -1,3 +1,10 @@
+/* universal */
+
+.unStyledLink {
+    text-decoration: none;
+    /* color: ; */
+}
+
 /* header */
 
 .mainNavigation .nav-item {

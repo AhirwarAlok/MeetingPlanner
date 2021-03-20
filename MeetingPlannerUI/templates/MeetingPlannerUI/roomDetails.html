@@ -9,15 +9,13 @@
         <div class="col-sm-12 col-md-6 col-lg-4 my-3">
             <div class="card shadow-sm flatCard">
                 <div class="card-header boldCardHeader">
-                    List of Room:
+                    {{ room.roomName }}
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        {% for room in rooms %}
-                        <li class="list-group-item">
-                            <a class="unStyledLink" href="{% url 'roomDetails' room.id %}">{{ room }}</a>
-                        </li>
-                        {% endfor %}
+                        <li class="list-group-item">Room No : {{ room.roomNo }}</li>
+                        <li class="list-group-item">Floor No : {{ room.floorNumber }}</li>
+                        <li class="list-group-item">Building Name : {{ room.buildingName }}</li>
                     </ul>
                 </div>
             </div>
