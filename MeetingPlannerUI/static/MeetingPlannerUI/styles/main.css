@@ -15,6 +15,10 @@
     border-radius: 0;
 }
 
+.boldCardHeader {
+    font-weight: 700;
+}
+
 /* footer */
 
 footer {
